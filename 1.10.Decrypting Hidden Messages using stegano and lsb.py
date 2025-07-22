@@ -57,7 +57,7 @@ def encryption():
         # If no image was selected, show a warning
         messagebox.showwarning("Error", "Please select an image and enter a message to encrypt.")
 
-def decrypt():
+def decryption():
     global file_path  # Use the selected image file path
     if file_path:
         try:
@@ -151,7 +151,7 @@ encrypt_button.pack(side="left",padx = 25)
 
 
 #Decrypt_Button:
-decrypt_button = ctk.CTkButton(buttons_container, image=decrypt, text="", fg_color=frame_background, hover_color=frame_background,)
+decrypt_button = ctk.CTkButton(buttons_container, image=decrypt, text="", fg_color=frame_background, hover_color=frame_background,command=decryption)
 decrypt_button.pack(side="left",padx = 25)
 
 
